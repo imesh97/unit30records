@@ -1,4 +1,5 @@
 import { Artist } from '@/lib/constants';
+import Image from "next/image";
 import Link from 'next/link';
 import { FaInstagram, FaItunesNote, FaSpotify, FaSoundcloud, FaYoutube, FaTiktok } from "react-icons/fa6";
 
@@ -12,9 +13,7 @@ export function ArtistCard({ artist }: ArtistCardProps) {
   return (
     <div className="flex flex-col gap-6">
       <div className="aspect-square bg-card border border-border rounded-lg flex items-center justify-center overflow-hidden hover:border-accent hover-glow transition-colors duration-300 group">
-        <span className="text-6xl md:text-7xl font-black text-muted-foreground group-hover:text-accent transition-colors duration-300">
-          {artist.abbreviation}
-        </span>
+        <Image src={artist.img} alt={artist.name} width={600} height={600} className="object-cover" />
       </div>
 
       <div className="space-y-2">

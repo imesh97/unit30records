@@ -1,5 +1,5 @@
-import { ARTISTS } from '@/lib/constants';
-import { ArtistCard } from '@/components/ArtistCard';
+import { ARTISTS } from "@/lib/constants";
+import { ArtistCard } from "@/components/ArtistCard";
 
 export default function ArtistsPage() {
   return (
@@ -13,7 +13,7 @@ export default function ArtistsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {ARTISTS.map((artist) => (
           <ArtistCard key={artist.id} artist={artist} />
         ))}

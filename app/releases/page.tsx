@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { RELEASES } from '@/lib/constants';
-import { ReleaseCard } from '@/components/ReleaseCard';
+import { useState } from "react";
+import { RELEASES } from "@/lib/constants";
+import { ReleaseCard } from "@/components/ReleaseCard";
 
 export default function ReleasesPage() {
-  const [selectedArtist, setSelectedArtist] = useState<string>('ALL');
+  const [selectedArtist, setSelectedArtist] = useState<string>("ALL");
 
   const filteredReleases =
-    selectedArtist === 'ALL'
+    selectedArtist === "ALL"
       ? RELEASES
       : RELEASES.filter((release) => release.artist === selectedArtist);
 
   const uniqueArtists = Array.from(new Set(RELEASES.map((r) => r.artist)));
-  const artists = ['ALL', ...uniqueArtists];
+  const artists = ["ALL", ...uniqueArtists];
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
@@ -27,19 +27,18 @@ export default function ReleasesPage() {
       </div>
 
       <div className="flex items-center gap-4 mb-12">
-        { artists.map((artist) => (
+        {artists.map((artist) => (
           <button
             key={artist}
             onClick={() => setSelectedArtist(artist)}
-            className={
-              `text-sm uppercase tracking-widest transition-colors cursor-pointer ${
-                selectedArtist === artist
-                  ? "text-accent"
-                  : "text-muted-foreground hover:text-foreground"
-              }`
-            }
+            id="copyright"
+            className={`text-sm uppercase tracking-wider transition-colors cursor-pointer ${
+              selectedArtist === artist
+                ? "text-accent"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
           >
-            {artist}
+            ⚡︎ {artist}
           </button>
         ))}
       </div>
