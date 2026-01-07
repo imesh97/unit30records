@@ -82,6 +82,19 @@ export const ARTISTS: Artist[] = [
 
 export const RELEASES: Release[] = [
   {
+    id: "bron",
+    title: "B R O N",
+    img: "/releases/bron.png",
+    artist: "hesmi",
+    type: "EP",
+    year: 2026,
+    socialLinks: {
+      spotify:
+        "https://open.spotify.com/album/2GOl0xCRJFp8YSM1lvA6MU?si=u8xsm9YVTVWUrt-gCKmo_A",
+      appleMusic: "https://music.apple.com/us/album/b-r-o-n-single/1865431381",
+    },
+  },
+  {
     id: "demon7ime",
     title: "demon7ime",
     img: "/releases/demon7ime.png",
